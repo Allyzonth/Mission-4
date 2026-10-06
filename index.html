@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Tasks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" id="app-name">Daily Tasks</a>
+
+    <div class="profile" aria-label="User profile">
+      <p id="profile-name">Dimas Pratama</p>
+      <p id="profile-job-title">Employee</p>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="greeting-heading">
+      <h2 id="greeting-heading">Good morning, <span id="user-name">Dimas</span></h2>
+      <p id="current-date"></p>
+    </section>
+
+    <section aria-labelledby="add-task-heading">
+      <h2 id="add-task-heading">Add a task</h2>
+      <form id="task-form">
+        <label for="task-description">Task</label>
+        <textarea id="task-description" name="description" rows="3" required></textarea>
+
+        <fieldset>
+          <legend>Priority</legend>
+          <label for="priority-low">
+            <input type="radio" id="priority-low" name="priority" value="Low">
+            Low
+          </label>
+          <label for="priority-medium">
+            <input type="radio" id="priority-medium" name="priority" value="Medium" checked>
+            Medium
+          </label>
+          <label for="priority-high">
+            <input type="radio" id="priority-high" name="priority" value="High">
+            High
+          </label>
+        </fieldset>
+
+        <button type="submit">Add task</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <dl class="task-summary">
+        <div>
+          <dt>Total tasks</dt>
+          <dd id="total-tasks">0</dd>
+        </div>
+        <div>
+          <dt>Pending</dt>
+          <dd id="pending-tasks">0</dd>
+        </div>
+        <div>
+          <dt>Done</dt>
+          <dd id="done-tasks">0</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="todo-heading">
+      <h2 id="todo-heading">To Do</h2>
+      <button type="button" id="delete-all">Delete all</button>
+      <ul id="todo-list" aria-label="Tasks to do"></ul>
+      <p id="todo-empty-state">No tasks to do yet.</p>
+    </section>
+
+    <section aria-labelledby="done-heading">
+      <h2 id="done-heading">Done</h2>
+      <ul id="done-list" aria-label="Completed tasks"></ul>
+      <p id="done-empty-state">No completed tasks yet.</p>
+    </section>
+  </main>
+</body>
+</html>
